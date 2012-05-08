@@ -1,8 +1,10 @@
-#include <Extreme.h>
+#include "DSP/Pyramids.h"
+#include "CriticalPoints/Extreme.h"
 
+#include <iostream>
 using namespace std;
 
- int findExtrema(GIMAGE *inImage, GIMAGE *lowImage, GIMAGE *highImage, IMAGE *extremeImage){
+ int findExtrema (GIMAGE *inImage, GIMAGE *lowImage, GIMAGE *highImage, IMAGE *extremeImage) {
 	int numExtreme = 0;
 
 	for(int n1 = 0; n1 < extremeImage->height; n1++)
@@ -10,12 +12,10 @@ using namespace std;
 			extremeImage->imageData[n1*inImage->width + n2] = 0;
 
 	for(int n1 = 1; n1 < inImage->height - 1 ; n1++)
-		for(int n2 = 1; n2 < inImage->width - 1; n2++)
-		{
+		for(int n2 = 1; n2 < inImage->width - 1; n2++) {
 			int i = 8;
 			for(int x = n1-1; x <= n1+1; x++)
-				for(int y = n2-1; y <= n2+1; y++)
-				{
+				for(int y = n2-1; y <= n2+1; y++) {
 					if(x == n1 && y == n2) continue;
 					if(inImage->imageData[n1*inImage->width+n2] > inImage->imageData[x*inImage->width+y])	i++;
 					else if(inImage->imageData[n1*inImage->width+n2] < inImage->imageData[x*inImage->width+y]) i--;
