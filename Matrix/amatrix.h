@@ -16,10 +16,12 @@ class AMATRIX:public MATRIX {
 	// Model
 		// Constructors
 		AMATRIX (int width, int height);
+		AMATRIX (MATRIX matrix);
 
 		// Matrix Initializations
 		void makeZeroMatrix (void);
 		void operator= (AMATRIX OtherMatrix);
+		void operator= (MATRIX OtherMatrix);
 		void setValue (int col, int row, MATRIX_CONTENT_TYPE value);
 		
 

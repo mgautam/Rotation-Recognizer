@@ -15,7 +15,9 @@ class MATRIX {
 		MATRIX_CONTENT_TYPE **data;
 
 	public:
+		MATRIX (void);
 		MATRIX (int width, int height);
+		MATRIX (MATRIX_CONTENT_TYPE *vector, int height);
 		
 		int getWidth (void);
 		int getHeight (void);

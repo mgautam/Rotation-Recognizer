@@ -8,6 +8,17 @@ AMATRIX::AMATRIX (int width, int height) : MATRIX (width,height) {
 	this->decomposed = false;
 }
 
+AMATRIX::AMATRIX (MATRIX matrix) {
+	
+	MATRIX::operator=(matrix);
+	
+	R_ptr = NULL;
+	Q_ptr = NULL;
+	this->decomposed = false;
+
+}
+
+
 
 // Matrix Initializations
 void AMATRIX::makeZeroMatrix (void) {
@@ -37,6 +48,15 @@ void AMATRIX::operator= (AMATRIX matrix) {
 		}		
 	}	
 	this->decomposed = matrix.decomposed;
+}
+
+void AMATRIX::operator= (MATRIX matrix) {
+	
+	MATRIX::operator=(matrix);
+
+	R_ptr = NULL;
+	Q_ptr = NULL;
+	this->decomposed = false;
 }
 
 void AMATRIX::setValue (int col, int row, MATRIX_CONTENT_TYPE value) {

@@ -1,6 +1,10 @@
 #include "Matrix/matrix.h"
 
 //Constructors
+MATRIX::MATRIX (void) {
+	
+}
+
 MATRIX::MATRIX (int width, int height) {
 	this->width = width;
 	this->height = height;
@@ -8,6 +12,14 @@ MATRIX::MATRIX (int width, int height) {
 	this->data = new MATRIX_CONTENT_TYPE*[width];	
 	for (int col = 0; col < width; col++)
 		this->data[col] = new MATRIX_CONTENT_TYPE[height];
+}
+
+MATRIX::MATRIX (MATRIX_CONTENT_TYPE *vector, int height) {
+	this->width = 1;
+	this->height = height;
+
+	this->data = new MATRIX_CONTENT_TYPE*[this->width];// can this be just new MATRIX_CONTENT_TYPE* ? What happens to next line?
+	this->data[0] = vector;
 }
 
 
