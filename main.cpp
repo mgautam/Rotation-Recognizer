@@ -4,6 +4,7 @@
 #include "Matrix/testMatrix.h"
 #include "AffineTransformer/testFrames.h"
 #include "ModelAffine/testAffineFit.h"
+#include "MotionExtract/testMotionExtract.h"
 
 int main (int argc, char **argv) {
 	//testImageEngine ();
@@ -11,7 +12,8 @@ int main (int argc, char **argv) {
 	//testCriticalPoints ();
 	//testMatrix ();
 	//testFrames ();
-	testAffineModel ();
+	//testAffineModel ();
+	testMotionExtract ();
 
 	return 0;
 }
