@@ -1,18 +1,21 @@
 #include "ModelAffine/testAffineFit.h"
 #include "ModelAffine/fitAffineMatrix.h"
 
+#define NUMBER_OF_PIXELS 100
+
 void testAffineModel (void) {
 	COORDS initial,final;
 
-	initial.x = new double[100];
-	initial.y = new double[100];
-	initial.Number_of_Coordinates = 100;
+	initial.Number_of_Coordinates = NUMBER_OF_PIXELS;
+	initial.x = new double[initial.Number_of_Coordinates];
+	initial.y = new double[initial.Number_of_Coordinates];	
 
-	final.x = new double[100];
-	final.y = new double[100];
-	final.Number_of_Coordinates = 100;
-
-	for (int index = 0; index < 100; index++) {
+	final.Number_of_Coordinates = NUMBER_OF_PIXELS;
+	final.x = new double[final.Number_of_Coordinates];
+	final.y = new double[final.Number_of_Coordinates];
+	
+	cout << "Test Vectors:" << endl;
+	for (int index = 0; index < NUMBER_OF_PIXELS; index++) {
 		initial.x[index] = index;
 		initial.y[index] = rand();
 	
@@ -25,5 +28,6 @@ void testAffineModel (void) {
 
 	}
 
+	cout << endl << "Estimated AffineMatrix:" << endl;
 	cout << fitAffineMatrix ( initial, final ) << endl;
 }

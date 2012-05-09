@@ -1,6 +1,0 @@
-#ifndef AFFINETRANSFORM_H
-#define AFFINETRANSFORM_H
-
-
-
-#endif

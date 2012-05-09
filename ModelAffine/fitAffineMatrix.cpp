@@ -41,7 +41,5 @@ MATRIX fitAffineMatrix (COORDS initialPosition, COORDS finalPosition ) {
 		AffineMatrixData[col][1] = affineY[col];
 	}
 
-	cout << AffineMatrix << endl;
-
 	return AffineMatrix;
 }

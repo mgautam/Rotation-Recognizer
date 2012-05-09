@@ -67,8 +67,8 @@ void AMATRIX::decomposeQR (void) {
 
 	}
 
-	cout << "Q Matrix is" << endl << *Q_ptr << endl;
-	cout << "R Matrix is" << endl << *R_ptr << endl;
+	//cout << "Q Matrix is" << endl << *Q_ptr << endl;
+	//cout << "R Matrix is" << endl << *R_ptr << endl;
 
 	decomposed = true;
 }
@@ -78,7 +78,7 @@ void invMult (MATRIX *upperTriangular, double* vector) {
 	int matHeight = upperTriangular->getHeight ();
 	MATRIX_CONTENT_TYPE **content = upperTriangular->getDataPtr ();
 
-	cout << "Inverse..." << endl;
+	//cout << "Inverse..." << endl;
 	if (matWidth == matHeight) {
 		for (int col = matWidth-1; col >= 0; col--) {
 			vector[col] /= content[col][col];
@@ -90,7 +90,7 @@ void invMult (MATRIX *upperTriangular, double* vector) {
 		cout << "Not a Square - Triangular Matrix!" << endl;
 		exit (-1);
 	}
-	cout << "ends" << endl;	
+	//cout << "ends" << endl;	
 }
 
 double* AMATRIX::invert (double *vector) {
