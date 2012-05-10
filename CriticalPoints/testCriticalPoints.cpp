@@ -4,6 +4,7 @@
 #include <CriticalPoints/testCriticalPoints.h>
 #include <bmpAccess/bmpEngine.h>
 
+#include <stdio.h>
 #include <iostream>
 using namespace std;
 

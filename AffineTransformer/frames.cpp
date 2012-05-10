@@ -2,6 +2,7 @@
 #include <bmpAccess/bmpEngine.h>
 #include <AffineTransformer/frames.h>
 
+#include <stdio.h>
 #include <math.h>
 
 void createFrames (char *fileName, int *translation, int numFrames) {
