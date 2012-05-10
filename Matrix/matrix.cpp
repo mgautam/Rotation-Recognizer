@@ -1,5 +1,7 @@
 #include <Matrix/matrix.h>
 
+#include <stdlib.h>
+
 //Constructors
 MATRIX::MATRIX (void) {
 	

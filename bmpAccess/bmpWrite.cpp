@@ -1,5 +1,8 @@
 #include <bmpAccess/bmpWrite.h>
 
+#include <stdio.h>
+#include <string.h>
+
 #define BYTE_POWER 256
 #define TWO_BYTES 2
 #define FOUR_BYTES 4

@@ -1,6 +1,8 @@
 #include <ModelAffine/testAffineFit.h>
 #include <ModelAffine/fitAffineMatrix.h>
 
+#include <stdlib.h>
+
 #define NUMBER_OF_PIXELS 100
 
 void testAffineModel (void) {

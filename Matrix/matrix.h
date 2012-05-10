@@ -21,7 +21,7 @@ class MATRIX {
 		
 		int getWidth (void);
 		int getHeight (void);
-		(MATRIX_CONTENT_TYPE**) getDataPtr (void);
+		MATRIX_CONTENT_TYPE** getDataPtr (void);
 		MATRIX_CONTENT_TYPE getValue (int col, int row);
 		friend ostream& operator<< (ostream& outStream, const MATRIX OtherMatrix);
 		

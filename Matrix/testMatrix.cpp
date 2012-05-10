@@ -1,7 +1,8 @@
-#include <iostream>
 #include <Matrix/amatrix.h>
 #include <Matrix/testMatrix.h>
 
+#include <stdlib.h>
+#include <iostream>
 using namespace std;
 
 void testMatrix (void) {
