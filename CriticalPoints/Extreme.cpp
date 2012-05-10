@@ -1,5 +1,5 @@
-#include "DSP/Pyramids.h"
-#include "CriticalPoints/Extreme.h"
+#include <DSP/Pyramids.h>
+#include <CriticalPoints/Extreme.h>
 
 #include <iostream>
 using namespace std;

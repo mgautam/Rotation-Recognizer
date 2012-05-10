@@ -1,4 +1,4 @@
-#include "bmpAccess/bmpCreate.h"
+#include <bmpAccess/bmpCreate.h>
 
 void createDataHeader(int width, int height, int numColors, BMPHeader *bmpHeader) {
 //	BMPHeader bmpHeader;

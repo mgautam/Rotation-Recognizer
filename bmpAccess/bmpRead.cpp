@@ -1,4 +1,4 @@
-#include "bmpAccess/bmpRead.h"
+#include <bmpAccess/bmpRead.h>
 
 #define TWO_BYTES 2
 #define FOUR_BYTES 4

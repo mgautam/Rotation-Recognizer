@@ -1,7 +1,7 @@
-#include "DSP/resample.h"
-#include "DSP/Pyramids.h"
-#include "DSP/testDSP.h"
-#include "bmpAccess/bmpEngine.h"
+#include <DSP/resample.h>
+#include <DSP/Pyramids.h>
+#include <DSP/testDSP.h>
+#include <bmpAccess/bmpEngine.h>
 
 #define TRAIN_FOLDER "C:\\Users\\Gautam\\Desktop\\Project\\01.Training"
 #define TEST_FOLDER "C:\\Users\\Gautam\\Desktop\\Project\\02.Test"

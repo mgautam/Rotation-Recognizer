@@ -2,7 +2,7 @@
 #define BMPREAD_H
 
 #include <iostream>
-#include "bmpAccess/bmpStructs.h"
+#include <bmpAccess/bmpStructs.h>
 
 void readFileHeader(FILE *fhandle, FileHeader *fileHeader, bool printInfo);
 void readDataHeader(FILE *fhandle, BMPHeader *bmpHeader, bool printInfo);

@@ -1,7 +1,7 @@
 #ifndef AMATRIX_H
 #define AMATRIX_H
 
-#include "Matrix/matrix.h"
+#include <Matrix/matrix.h>
 
 #include <iostream>
 using namespace std;

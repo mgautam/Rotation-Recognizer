@@ -2,7 +2,7 @@
 #define BMPWRITE_H
 
 #include<iostream>
-#include "bmpAccess/bmpStructs.h"
+#include <bmpAccess/bmpStructs.h>
 
 using namespace std;
 

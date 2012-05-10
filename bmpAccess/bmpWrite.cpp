@@ -1,4 +1,4 @@
-#include "bmpAccess/bmpWrite.h"
+#include <bmpAccess/bmpWrite.h>
 
 #define BYTE_POWER 256
 #define TWO_BYTES 2

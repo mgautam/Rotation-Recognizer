@@ -1,7 +1,7 @@
-#include "bmpAccess/bmpRead.h"
-#include "bmpAccess/bmpCreate.h"
-#include "bmpAccess/bmpWrite.h"
-#include "bmpAccess/bmpEngine.h"
+#include <bmpAccess/bmpRead.h>
+#include <bmpAccess/bmpCreate.h>
+#include <bmpAccess/bmpWrite.h>
+#include <bmpAccess/bmpEngine.h>
 
  IMAGE* readRGB(char *fileName, bool printInfo){
 	if(printInfo) printf("Reading File...\n");

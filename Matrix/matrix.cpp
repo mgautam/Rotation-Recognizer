@@ -1,4 +1,4 @@
-#include "Matrix/matrix.h"
+#include <Matrix/matrix.h>
 
 //Constructors
 MATRIX::MATRIX (void) {

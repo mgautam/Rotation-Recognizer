@@ -1,4 +1,4 @@
-#include "ModelAffine/fitAffineMatrix.h"
+#include <ModelAffine/fitAffineMatrix.h>
 
 MATRIX fitAffineMatrix (COORDS initialPosition, COORDS finalPosition ) {
 	AMATRIX initialAMatrix = AMATRIX (3,initialPosition.Number_of_Coordinates);

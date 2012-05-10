@@ -1,4 +1,4 @@
-#include "Matrix/amatrix.h"
+#include <Matrix/amatrix.h>
 
 
 // Constructors

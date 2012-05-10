@@ -1,7 +1,7 @@
 #ifndef BMPENGINE_H
 #define BMPENGINE_H
 
-#include "bmpAccess/bmpStructs.h"
+#include <bmpAccess/bmpStructs.h>
 
 // File Operations
  IMAGE* readRGB(char *fileName, bool printInfo = false);

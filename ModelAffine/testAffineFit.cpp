@@ -1,5 +1,5 @@
-#include "ModelAffine/testAffineFit.h"
-#include "ModelAffine/fitAffineMatrix.h"
+#include <ModelAffine/testAffineFit.h>
+#include <ModelAffine/fitAffineMatrix.h>
 
 #define NUMBER_OF_PIXELS 100
 

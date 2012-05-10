@@ -1,7 +1,7 @@
 #ifndef PYRAMIDS_H
 #define PYRAMIDS_H
 
-#include "bmpAccess/bmpStructs.h"
+#include <bmpAccess/bmpStructs.h>
 
 #define NULL 0
 

@@ -1,6 +1,6 @@
 #include <iostream>
-#include "Matrix/amatrix.h"
-#include "Matrix/testMatrix.h"
+#include <Matrix/amatrix.h>
+#include <Matrix/testMatrix.h>
 
 using namespace std;
 

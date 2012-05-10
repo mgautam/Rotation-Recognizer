@@ -1,5 +1,5 @@
-#include "MotionExtract/testMotionExtract.h"
-#include "MotionExtract/MotionExtract.h"
+#include <MotionExtract/testMotionExtract.h>
+#include <MotionExtract/MotionExtract.h>
 #include <math.h>
 
 void testMotionExtract (void) {

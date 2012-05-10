@@ -1,6 +1,6 @@
 #include <DSP/filter.h>
 #include <DSP/resample.h>
-#include "bmpAccess/bmpEngine.h"
+#include <bmpAccess/bmpEngine.h>
 
 #include <iostream>
 using namespace std;

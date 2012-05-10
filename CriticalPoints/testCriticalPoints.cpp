@@ -1,8 +1,8 @@
-#include "DSP/resample.h"
-#include "DSP/Pyramids.h"
-#include "CriticalPoints/Extreme.h"
-#include "CriticalPoints/testCriticalPoints.h"
-#include "bmpAccess/bmpEngine.h"
+#include <DSP/resample.h>
+#include <DSP/Pyramids.h>
+#include <CriticalPoints/Extreme.h>
+#include <CriticalPoints/testCriticalPoints.h>
+#include <bmpAccess/bmpEngine.h>
 
 #include <iostream>
 using namespace std;
@@ -20,7 +20,7 @@ void testCriticalPoints (void) {
 	GIMAGE *inImage,*lowImage,*highImage;
 	IMAGE *extremeImage;
 	char fileName[100];//44
-	int numExtrema=0,totKeys =0,numKeys;
+	int numExtrema=0;
 	
 	
 	inImage = createImage(1024,1024,1);

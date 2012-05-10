@@ -1,4 +1,4 @@
-#include "Matrix/amatrix.h"
+#include <Matrix/amatrix.h>
 #include <math.h>
 static double dotproduct (double *vector1, double *vector2, int size);
 static double L2Norm (double *vector, int size);
