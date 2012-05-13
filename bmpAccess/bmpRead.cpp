@@ -1,9 +1,5 @@
 #include <bmpAccess/bmpRead.h>
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-
 #define TWO_BYTES 2
 #define FOUR_BYTES 4
 #define MULTIPLY_BYTE_POSITION (2<<((8*byteIndex)))/2 /* why /2 is required? */

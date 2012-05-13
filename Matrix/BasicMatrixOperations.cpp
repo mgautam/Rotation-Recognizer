@@ -1,6 +1,5 @@
 #include <Matrix/amatrix.h>
 
-#include <stdlib.h>
 
 // Constructors
 AMATRIX::AMATRIX (int width, int height) : MATRIX (width,height) {

@@ -3,8 +3,6 @@
 #include <bmpAccess/bmpWrite.h>
 #include <bmpAccess/bmpEngine.h>
 
-#include <stdio.h>
-
  IMAGE* readRGB(char *fileName, bool printInfo){
 	if(printInfo) printf("Reading File...\n");
 	FileHeader fileHeader;
