@@ -61,8 +61,15 @@ int main (int argc, char **argv) {
 	showMotion (affine);
 */
 
-	
-	processFrames ();
+
+	FILE *outputRotation;
+	char FileName[100];
+	for (int Threshold = 51; Threshold < 900; Threshold+=10) {
+		sprintf (FileName, "C:\\Users\\Gautam\\Desktop\\Project\\02.Test\\Rotation\\Threshold(%d).bin",Threshold);
+		outputRotation = fopen (FileName, "wb");
+		processFrames (Threshold,outputRotation);
+		fclose (outputRotation);
+	}
 	
 	
 	return 0;

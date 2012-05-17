@@ -1,7 +1,7 @@
 #include <MotionExtract/MotionExtract.h>
 #include <math.h>
 
-void showMotion (MATRIX AffineMatrix) {
+void showMotion (MATRIX AffineMatrix, FILE *output) {
 	
 	MATRIX_CONTENT_TYPE** AffineMatrixData = AffineMatrix.getDataPtr();
 	
@@ -12,5 +12,11 @@ void showMotion (MATRIX AffineMatrix) {
 	double cosX = rawCosX / Normalizer;
 	double sinX = rawSinX / Normalizer;
 
-	printf ("Rotation: %6.3lf = %6.3lf Translation: ( x: %8.3lf , y: %8.3lf )\n",acos (cosX), asin (sinX), AffineMatrixData[2][0], AffineMatrixData[2][1]);
+	double theta = acos (cosX);
+
+	printf ("Rotation: %6.3lf = %6.3lf Translation: ( x: %8.3lf , y: %8.3lf )\n", theta, asin (sinX), AffineMatrixData[2][0], AffineMatrixData[2][1]);
+	
+	if (output) 
+		fwrite (&theta, sizeof (double), 1, output);
+
 }

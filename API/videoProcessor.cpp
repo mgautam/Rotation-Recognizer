@@ -9,7 +9,7 @@
 #include <iostream>
 using namespace std;
 
-void processFrames (bool printInfo) {
+void processFrames (double threshold, FILE *RotationDataFile, bool printInfo) {
 	FEATURES train;
 	FILE *featureFile = fopen ("C:\\Users\\Gautam\\Desktop\\Project\\01.Training\\07.SIFT_Keys\\siftfeature.bin","rb");	
 	fread (&(train.FeatureVectorLength),sizeof (int), 1, featureFile);
@@ -49,11 +49,10 @@ void processFrames (bool printInfo) {
 
 
 
-		coordinateMappings = findNearestNeighbor (train,test, 100);
+		coordinateMappings = findNearestNeighbor (train,test, threshold);
 		initial = coordinateMappings[0];
 		final = coordinateMappings[1];
-		delete coordinateMappings;
-
+		
 		if (printInfo) {
 			cout << "Number of Features: " << (int) test.Number_of_Features  << "\t";
 			cout << "Below Threshold Features: " << (int)final.Number_of_Coordinates << endl;
@@ -73,13 +72,18 @@ void processFrames (bool printInfo) {
 		if (printInfo) cout << affine << endl;
 
 		printf ("Frame: %2d  ", frameIndex);
-		showMotion (affine);
+		showMotion (affine,  RotationDataFile);
 
 		// Garbage Collection: Test Feature
 		for (int featureIndex = 0; featureIndex < test.Number_of_Features; featureIndex ++)
 			delete test.features[featureIndex].FeatureVector;
 		delete test.features;
-	}
+
+		delete coordinateMappings->x;
+		delete coordinateMappings->y;
+		delete coordinateMappings->scores;
+		delete coordinateMappings;
+	}	
 /*
 	// Garbage Collection: Train Feature
 	for (int featureIndex = 0; featureIndex < test.Number_of_Features; featureIndex ++)
