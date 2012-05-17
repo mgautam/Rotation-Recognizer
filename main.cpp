@@ -7,6 +7,7 @@
 #include <MotionExtract/testMotionExtract.h>
 #include <Features/testMatchFeatures.h>
 
+#include <API/videoProcessor.h>
 
 #include <ModelAffine/coordinates.h>
 #include <ModelAffine/fitAffineMatrix.h>
@@ -23,7 +24,7 @@ int main (int argc, char **argv) {
 	//testAffineModel ();
 	//testMotionExtract ();
 	//testMatchFeatures ();
-
+/*
 	COORDS initial,final;
 	
 	FILE *matchFile = fopen ("C:\\Users\\Gautam\\Desktop\\Project\\Matlab Code\\siftmatches.bin","rb");
@@ -43,12 +44,13 @@ int main (int argc, char **argv) {
 
 	fclose (matchFile);
 
+
 	cout << "length:" << (int)final.Number_of_Coordinates << endl;
 	cout << "Matches:" << endl;
 	for (int matchIndex = 0; matchIndex < final.Number_of_Coordinates; matchIndex++) {
-		cout << "(" << initial.x[matchIndex] << "," << initial.y[matchIndex] << ")";
-		cout << " => ";
 		cout << "(" << final.x[matchIndex] << "," << final.y[matchIndex] << ")";
+		cout << " => ";
+		cout << "(" << initial.x[matchIndex] << "," << initial.y[matchIndex] << ")";
 		cout << endl;
 	}
 
@@ -57,6 +59,11 @@ int main (int argc, char **argv) {
 	cout << affine << endl;
 
 	showMotion (affine);
+*/
 
+	
+	processFrames ();
+	
+	
 	return 0;
 }

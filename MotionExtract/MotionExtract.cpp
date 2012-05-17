@@ -12,6 +12,5 @@ void showMotion (MATRIX AffineMatrix) {
 	double cosX = rawCosX / Normalizer;
 	double sinX = rawSinX / Normalizer;
 
-	cout << "Rotation: " << acos (cosX) << " = " << asin (sinX) << "   " ;
-	cout << "Translation: " << "( x: " << AffineMatrixData[2][0] << " , y: " << AffineMatrixData[2][1] << " )" << endl;
+	printf ("Rotation: %6.3lf = %6.3lf Translation: ( x: %8.3lf , y: %8.3lf )\n",acos (cosX), asin (sinX), AffineMatrixData[2][0], AffineMatrixData[2][1]);
 }
