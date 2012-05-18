@@ -2,8 +2,8 @@
 #define FEATURESTRUCT_H
 
 typedef struct {
-	int x,y;
-	double *FeatureVector;
+	double x,y;
+	char *FeatureVector;
 } FEATURE;
 
 typedef struct {

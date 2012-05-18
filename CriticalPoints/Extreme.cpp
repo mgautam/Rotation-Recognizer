@@ -57,6 +57,11 @@ using namespace std;
 				}
 			}
 		}
+
+
+		/* Edge Response Removal */
+
+
 		cout << "\t\tNumber of Extrema Points:" << numExtreme << endl;
 		return numExtreme;
 }

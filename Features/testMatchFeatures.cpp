@@ -11,7 +11,6 @@ void testMatchFeatures (void) {
 	int NumberofTestFeatures = 10;
 
 
-
 	FEATURES TrainFeature;
 	FEATURES TestFeature;
 
@@ -29,7 +28,7 @@ void testMatchFeatures (void) {
 
 		TrainFeature.features[FeatureIndex].x = FeatureIndex;
 		TrainFeature.features[FeatureIndex].y = FeatureIndex;
-		TrainFeature.features[FeatureIndex].FeatureVector = new double [FeatureVectorLength];
+		TrainFeature.features[FeatureIndex].FeatureVector = new char [FeatureVectorLength];
 
 		for (int vectorIndex = 0; vectorIndex < FeatureVectorLength; vectorIndex++)
 			TrainFeature.features[FeatureIndex].FeatureVector[vectorIndex] = (FeatureIndex+1)*vectorIndex;
@@ -40,7 +39,7 @@ void testMatchFeatures (void) {
 
 		TestFeature.features[FeatureIndex].x = FeatureIndex;
 		TestFeature.features[FeatureIndex].y = FeatureIndex;
-		TestFeature.features[FeatureIndex].FeatureVector = new double [FeatureVectorLength];
+		TestFeature.features[FeatureIndex].FeatureVector = new char [FeatureVectorLength];
 					
 		for (int vectorIndex = 0; vectorIndex < FeatureVectorLength; vectorIndex++)
 			TestFeature.features[FeatureIndex].FeatureVector[vectorIndex] = FeatureIndex*vectorIndex;
@@ -48,9 +47,9 @@ void testMatchFeatures (void) {
 	}
 
 
-	COORDS* coordinates = findNearestNeighbor (TrainFeature,TestFeature);
+	COORDS* coordinates = findNearestNeighbor (TrainFeature,TestFeature, 16);
 
-	for (int FeatureIndex = 0; FeatureIndex < NumberofTestFeatures; FeatureIndex++) {
+	for (int FeatureIndex = 0; FeatureIndex < coordinates->Number_of_Coordinates; FeatureIndex++) {
 		cout << "Train:(" << coordinates[0].x[FeatureIndex] << "," << coordinates[0].y[FeatureIndex] << ")";
 		cout << " => " << "Test:(" << coordinates[1].x[FeatureIndex] << "," << coordinates[1].y[FeatureIndex] << ")" << endl;
 	}

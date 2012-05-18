@@ -7,15 +7,23 @@
 #include <MotionExtract/testMotionExtract.h>
 #include <Features/testMatchFeatures.h>
 
+#include <API/videoProcessor.h>
+
+#include <ModelAffine/coordinates.h>
+#include <ModelAffine/fitAffineMatrix.h>
+#include <MotionExtract/MotionExtract.h>
+#include <iostream>
+using namespace std;
+
 int main (int argc, char **argv) {
 	//testImageEngine ();
 	//testDSP ();
 	//testCriticalPoints ();
 	//testMatrix ();
-	//testFrames ();
+	// testFrames ();
 	//testAffineModel ();
 	//testMotionExtract ();
 	testMatchFeatures ();
-
+	
 	return 0;
 }
