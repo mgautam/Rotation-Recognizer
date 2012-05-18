@@ -20,6 +20,7 @@ void processFrames (double threshold, FILE *RotationDataFile, bool printInfo) {
 	for (int index = 0; index < train.Number_of_Features; index ++) {
 		fread ( &(train.features[index].x), sizeof (double), 1 , featureFile);
 		fread ( &(train.features[index].y), sizeof (double), 1 , featureFile);
+		fseek (featureFile, 2 * sizeof (double), SEEK_CUR); // Skip Reading scale and key orientation
 		train.features[index].FeatureVector = new char[train.FeatureVectorLength];
 		fread ( train.features[index].FeatureVector, sizeof (char), train.FeatureVectorLength , featureFile);
 	}
