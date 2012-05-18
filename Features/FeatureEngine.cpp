@@ -17,15 +17,6 @@ using namespace std;
 
 int main (int argc, char **argv) {
 
-	//testImageEngine ();
-	//testDSP ();
-	//testCriticalPoints ();
-	//testMatrix ();
-	// testFrames ();
-	//testAffineModel ();
-	//testMotionExtract ();
-	//testMatchFeatures ();
-/*
 	COORDS initial,final;
 	
 	FILE *matchFile = fopen ("C:\\Users\\Gautam\\Desktop\\Project\\Matlab Code\\siftmatches.bin","rb");
@@ -60,7 +51,6 @@ int main (int argc, char **argv) {
 	cout << affine << endl;
 
 	showMotion (affine);
-*/
 
 
 	FILE *outputRotation;
